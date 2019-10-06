@@ -18,15 +18,15 @@ curl -X GET -i http://localhost:8090/ws/r/rest/countries
 
 C.R.U.D. Testing sequence
 
-  Create
+  Create:
     curl -X POST -i http://localhost:8090/ws/r/rest/countries --data '[{"code":"FJS","codedesc":"FourJs WWDC19"}]'
     
-  Read
+  Read:
     curl -X GET -i http://localhost:8090/ws/r/rest/countries/FJS
     curl -X GET -i 'http://localhost:8090/ws/r/rest/countries?id=FJS'
     
-  Update
+  Update:
     curl -X PUT -i http://localhost:8090/ws/r/rest/countries --data '[{"code":"FJS","codedesc":"xxx Delete Me xxx"}]'
     
-  Delete
+  Delete:
     curl -X DELETE -i 'http://localhost:8090/ws/r/rest/countries?id=FJS'
