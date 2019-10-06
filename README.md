@@ -9,11 +9,9 @@ The service can be tested with a variety of testing clients(Postman, Browser RES
 
 Example curl commands
 
-  curl -X GET -i http://localhost:8090/ws/r/rest/categories
-
-  curl -X GET -i http://localhost:8090/ws/r/rest/suppliers
-
-  curl -X GET -i http://localhost:8090/ws/r/rest/countries
+    curl -X GET -i http://localhost:8090/ws/r/rest/categories
+    curl -X GET -i http://localhost:8090/ws/r/rest/suppliers
+    curl -X GET -i http://localhost:8090/ws/r/rest/countries
 
 
 C.R.U.D. Testing sequence
