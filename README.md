@@ -7,27 +7,30 @@ Requires: Genero BDL with Web Services(FGLWS) v3.20 of greater to compile and ex
 
 The service can be tested with a variety of testing clients(Postman, Browser RESTlet plugin, curl)
 
-Example curl command
+Example curl commands
 
-curl -X GET -i http://localhost:8090/ws/r/rest/categories
+  curl -X GET -i http://localhost:8090/ws/r/rest/categories
 
-curl -X GET -i http://localhost:8090/ws/r/rest/suppliers
+  curl -X GET -i http://localhost:8090/ws/r/rest/suppliers
 
-curl -X GET -i http://localhost:8090/ws/r/rest/countries
+  curl -X GET -i http://localhost:8090/ws/r/rest/countries
 
 
 C.R.U.D. Testing sequence
 
   Create:
+    
     curl -X POST -i http://localhost:8090/ws/r/rest/countries --data '[{"code":"FJS","codedesc":"FourJs WWDC19"}]'
     
   Read:
-    curl -X GET -i http://localhost:8090/ws/r/rest/countries/FJS
     
+    curl -X GET -i http://localhost:8090/ws/r/rest/countries/FJS
     curl -X GET -i 'http://localhost:8090/ws/r/rest/countries?id=FJS'
     
   Update:
+    
     curl -X PUT -i http://localhost:8090/ws/r/rest/countries --data '[{"code":"FJS","codedesc":"xxx Delete Me xxx"}]'
     
   Delete:
+    
     curl -X DELETE -i 'http://localhost:8090/ws/r/rest/countries?id=FJS'
