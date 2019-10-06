@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkspaceViewState version="1.0">
+  <ExpandedNodes>
+    <Node path="WWDC2019 Language Core 3.20.4pw" type="pm/main-project"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/database" type="pm/group"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/database/Databases" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/database/interfacesFactory" type="pm/group"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/database/interfacesFactory/factories" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/database/interfacesFactory/interfaceRequest" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/database/interfacesFactory/interfaces" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/domain/dom" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/logger/logging" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/PPT-Code/presentation" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/restServer2" type="pm/group"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/restServer2/resources" type="pm/library"/>
+    <Node path="WWDC2019 Language Core 3.20.4pw/restServer2/restServer2" type="pm/application"/>
+  </ExpandedNodes>
+  <OpenDocuments>
+    <Document container="true" filePath="restServer2/restServer2.4gl" locator="112:3" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="interfaces/interfaceRequest.4gl" locator="146:1" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="domain/country/country.4gl" locator="187:1" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="officestore.4db" locator="" module="mod-db3"/>
+    <Document container="true" filePath="interfaces/categoryInterface.4gl" locator="34:34" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="interfaces/supplierInterface.4gl" locator="45:38" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="interfaces/interfaceFactory.4gl" locator="1:1" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="interfaces/countryInterface.4gl" locator="1:1" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="restServer2/resources/fglprofile" locator="6:1" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="C:/Users/FourJs/AppData/Roaming/FourJs/fglprofile" locator="203:1:245:32" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+  </OpenDocuments>
+  <CurrentDocument filePath="restServer2/resources/fglprofile" module="mod-ce3"/>
+</WorkspaceViewState>
