@@ -23,6 +23,7 @@ C.R.U.D. Testing sequence
     
   Read:
     curl -X GET -i http://localhost:8090/ws/r/rest/countries/FJS
+    
     curl -X GET -i 'http://localhost:8090/ws/r/rest/countries?id=FJS'
     
   Update:
