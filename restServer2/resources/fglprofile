@@ -1,0 +1,2 @@
+dbi.database.officestore.source   = "../officestore.db"
+dbi.database.officestore.driver   = "dbmsqt"
