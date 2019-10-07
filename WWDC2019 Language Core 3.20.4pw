@@ -69,21 +69,6 @@
       <File filePath="database/officestore.4db"/>
       <File filePath="database/officestore.sch"/>
     </Library>
-    <Group id="81410076" label="interfacesFactory" language="Genero">
-      <Library binaryName="factories" dependencies="93056229,352569545,1986,85067868,320085717" id="14000" label="factories">
-        <File excludeFromLink="true" filePath="interfaces/cookieFactory.4gl"/>
-        <File excludeFromLink="true" filePath="interfaces/interfaceFactory.4gl"/>
-        <File excludeFromLink="true" filePath="interfaces/pingFactory.4gl"/>
-      </Library>
-      <Library binaryName="interfaceRequest" dependencies="294572712,320085717" id="85067868" label="interfaceRequest">
-        <File excludeFromLink="true" filePath="interfaces/interfaceRequest.4gl"/>
-      </Library>
-      <Library binaryName="interfaces" dependencies="93056229,1986" id="352569545" label="interfaces">
-        <File excludeFromLink="true" filePath="interfaces/categoryInterface.4gl"/>
-        <File excludeFromLink="true" filePath="interfaces/countryInterface.4gl"/>
-        <File excludeFromLink="true" filePath="interfaces/supplierInterface.4gl"/>
-      </Library>
-    </Group>
   </Group>
   <Group id="285496687" label="domain" language="Genero">
     <Library binaryName="dom" dependencies="1986,320085717" id="93056229" label="dom">
@@ -102,6 +87,21 @@
     </Library>
     <Library binaryName="utility" dependencies="30777294,320085717" id="434103810" label="utility">
       <File excludeFromLink="true" filePath="foundation/application/appUtility.4gl"/>
+    </Library>
+  </Group>
+  <Group id="81410076" label="interfacesFactory" language="Genero">
+    <Library binaryName="factories" dependencies="93056229,352569545,1986,85067868,320085717" id="14000" label="factories">
+      <File excludeFromLink="true" filePath="interfaces/cookieFactory.4gl"/>
+      <File excludeFromLink="true" filePath="interfaces/interfaceFactory.4gl"/>
+      <File excludeFromLink="true" filePath="interfaces/pingFactory.4gl"/>
+    </Library>
+    <Library binaryName="interfaceRequest" dependencies="294572712,320085717" id="85067868" label="interfaceRequest">
+      <File excludeFromLink="true" filePath="interfaces/interfaceRequest.4gl"/>
+    </Library>
+    <Library binaryName="interfaces" dependencies="93056229,1986" id="352569545" label="interfaces">
+      <File excludeFromLink="true" filePath="interfaces/categoryInterface.4gl"/>
+      <File excludeFromLink="true" filePath="interfaces/countryInterface.4gl"/>
+      <File excludeFromLink="true" filePath="interfaces/supplierInterface.4gl"/>
     </Library>
   </Group>
   <Group id="65571176" label="logger" language="Genero">
@@ -126,7 +126,7 @@
       <File filePath="restServer2/resources/MANIFEST"/>
       <File filePath="restServer2/resources/restServer2.xcf"/>
     </Library>
-    <Application binaryName="restServer2" dependencies="14000,30777294,434103810,85067868,320085717" environment="dirlist:FGLSOURCEPATH=$(ProjectDir)/domain/category;$(ProjectDir)/domain/country;$(ProjectDir)/domain/credential;$(ProjectDir)/domain/supplier;$(ProjectDir)/interfaces;$(ProjectDir)/restServer2;$fglsourcepath,value:FGLDBNAME=officestore,value:GWS_MODULE=officestore,value:GWS_BASEPATH=http://localhost:8090/ws/r/rest,value:GWS_MAXLENGTH=-1,value:GWS_RWTIMEOUT=60,value:GWS_CONNECTTIMEOUT=25" id="457744524" label="restServer2">
+    <Application binaryName="restServer2" dependencies="14000,30777294,434103810,85067868,320085717" environment="value:GWS_AUTHENTICATE=0,value:FGLDBNAME=officestore,value:GWS_MODULE=officestore,value:GWS_BASEPATH=http://localhost:8090/ws/r/rest,value:GWS_MAXLENGTH=-1,value:GWS_RWTIMEOUT=60,value:GWS_CONNECTTIMEOUT=25" id="457744524" label="restServer2">
       <File filePath="restServer2/restServer2.4gl"/>
     </Application>
   </Group>
