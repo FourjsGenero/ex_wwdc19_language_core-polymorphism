@@ -146,7 +146,7 @@ end main
 #+ Description: Initialize web service configuration
 #+
 private function serverInitialize() returns()
-    define serviceModule, servicePath string
+    #define serviceModule, servicePath string
 
     # Set response maximumn length.  Default -1(unlimited)
     call com.WebServiceEngine.SetOption("maximumresponselength", getServerCofiguration("GWS_MAXLENGTH"))
@@ -157,6 +157,7 @@ private function serverInitialize() returns()
     # Set connection timeout.  Default is infinit(-1)
     call com.WebServiceEngine.SetOption("connectiontimeout", getServerCofiguration("GWS_CONNECTTIMEOUT"))
 
+{
     # Example URL: http://server/config/ws/r/rest/officestore
     #     GWS_MODULE = officestore
     #     GWS_BASEPATH = http://server/config/ws/r/rest
@@ -166,7 +167,7 @@ private function serverInitialize() returns()
         call logger.logEvent(logger.C_LOGMSG, ARG_VAL(0), sfmt("Line: %1", __LINE__), "Check service configuration settings.")
         call appUtility.programExit(1)
     end if
-
+}
     return
 end function
 
