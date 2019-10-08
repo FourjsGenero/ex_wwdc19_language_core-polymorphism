@@ -105,23 +105,36 @@ function setRestRequestInfo(incomingRequest com.HttpServiceRequest) returns()
     # Populate the query items
     call mThisRequest.getUrlQuery(mRequestInfo.items)
 
-    # Does the path(/ws/r/country) contain the baseUri(/ws/r/rest/)
+    # Does the path(/ws/r/xcf/country) contain the baseUri(/ws/r/rest/)
     # The resource substring start position can derive from length of baseUri constant rather than looping
-    if mRequestInfo.path.getIndexOf(mBaseUri,1) then
-        let requestTokenizer =
-            base.StringTokenizer.create(mRequestInfo.path.subString(mBaseUri.getLength(), mRequestInfo.path.getLength()), "/")
-        let mRequestInfo.resource = requestTokenizer.nextToken()
+    call logger.logEvent(
+        logger.C_LOGDEBUG,
+        ARG_VAL(0),
+        sfmt("Line: %1", __LINE__),
+        sfmt("requestTokenizer: %1 ", mRequestInfo.path.subString(mBaseUri.getLength(), mRequestInfo.path.getLength())))
 
-        # Check for URL query token http://server/ws/r/rest/countries/{id}
-        # Here we transform the {id} as if it were provided as query string:
-        # http://server/ws/r/rest/countries?id="value"
-        if requestTokenizer.hasMoreTokens() then
-            call mRequestInfo.items.appendElement()
-            let i = mRequestInfo.items.getLength()
-            let mRequestInfo.items[i].keyName = "id"
-            let mRequestInfo.items[i].keyValue = requestTokenizer.nextToken()
+    let i = mRequestInfo.path.getIndexOf(mBaseUri, 1)
+
+    if i then
+        if mRequestInfo.path.getIndexOf(mBaseUri, 1) then
+            let requestTokenizer =
+                base.StringTokenizer.create(
+                    mRequestInfo.path.subString(i + mBaseUri.getLength(), mRequestInfo.path.getLength()), "/")
+            let mRequestInfo.resource = requestTokenizer.nextToken()
+
+            call logger.logEvent(
+                logger.C_LOGDEBUG, ARG_VAL(0), sfmt("Line: %1", __LINE__), sfmt("requestTokenizer: %1", mRequestInfo.path))
+            # Check for URL query token http://server/ws/r/rest/countries/{id}
+            # Here we transform the {id} as if it were provided as query string:
+            # http://server/ws/r/rest/countries?id="value"
+            if requestTokenizer.hasMoreTokens() then
+                call mRequestInfo.items.appendElement()
+                let i = mRequestInfo.items.getLength()
+                let mRequestInfo.items[i].keyName = "id"
+                let mRequestInfo.items[i].keyValue = requestTokenizer.nextToken()
+            end if
+            let mRequestInfo.payload = util.JSON.stringify(mRequestInfo.items)
         end if
-        let mRequestInfo.payload = util.JSON.stringify(mRequestInfo.items)
     end if
 
     # Get authorization cookie...
