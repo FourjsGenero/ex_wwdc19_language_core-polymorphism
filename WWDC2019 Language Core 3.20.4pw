@@ -64,11 +64,6 @@
   </Settings>
   <LanguageList version="1.0"/>
   <PlatformList version="1.0"/>
-  <Group id="54502448" label="codeFormatter" language="Genero">
-    <Library binaryName="formatConfiguration" id="151528496" label="formatConfiguration" targetDirectory="$(ProjectDir)">
-      <File filePath=".fgl_format"/>
-    </Library>
-  </Group>
   <Group id="117981912" label="database" language="Genero">
     <Library binaryName="Databases" id="1986" label="Databases">
       <File filePath="database/officestore.4db"/>
@@ -142,7 +137,7 @@
       <File filePath="restServer2/resources/MANIFEST"/>
       <File filePath="restServer2/resources/restServer2.xcf"/>
     </Library>
-    <Application binaryName="restServer2" dependencies="14000,30777294,434103810,85067868,320085717" environment="value:FGLAPPSERVER=8090,value:GWS_AUTHENTICATE=0,value:FGLDBNAME=officestore,value:GWS_MODULE=officestore,value:GWS_BASEPATH=http://localhost:8090/ws/r/rest,value:GWS_MAXLENGTH=-1,value:GWS_RWTIMEOUT=60,value:GWS_CONNECTTIMEOUT=25" id="457744524" label="restServer2">
+    <Application binaryName="restServer2" dependencies="14000,30777294,434103810,85067868,320085717" environment="value:FGLAPPSERVER=8090,value:GWS_AUTHENTICATE=0,value:FGLDBNAME=officestore,value:GWS_BASEURI=/ws/r/rest,value:GWS_MAXLENGTH=-1,value:GWS_RWTIMEOUT=60,value:GWS_CONNECTTIMEOUT=25" id="457744524" label="restServer2">
       <File filePath="restServer2/restServer2.4gl"/>
     </Application>
   </Group>
