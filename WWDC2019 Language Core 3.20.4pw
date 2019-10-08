@@ -64,6 +64,11 @@
   </Settings>
   <LanguageList version="1.0"/>
   <PlatformList version="1.0"/>
+  <Group id="54502448" label="codeFormatter" language="Genero">
+    <Library binaryName="formatConfiguration" id="151528496" label="formatConfiguration" targetDirectory="$(ProjectDir)">
+      <File filePath=".fgl_format"/>
+    </Library>
+  </Group>
   <Group id="117981912" label="database" language="Genero">
     <Library binaryName="Databases" id="1986" label="Databases">
       <File filePath="database/officestore.4db"/>
@@ -109,6 +114,15 @@
       <File excludeFromLink="true" filePath="foundation/logger/logger.4gl"/>
     </Library>
   </Group>
+  <Group id="55027270" label="packages" language="Genero">
+    <Package binaryName="ws_restServer2" dependencies="457744524,80943291" id="-280246116" label="ws_restServer2" platform="Genero Application Server">
+      <DynamicProperty name="packageId" value="ws_Stores"/>
+      <DynamicProperty name="packageLabel" value="ws_Stores"/>
+      <Directory destinationDirectory="$(RootDir)/bin" excludedFiles="Test.42r" includedFiles="*.42?" label="Binaries" sourceDirectory="$(ProjectDir)/bin"/>
+      <Directory destinationDirectory="$(RootDir)/database" includedFiles="*.db" label="DB" sourceDirectory="$(ProjectDir)/database"/>
+      <Directory includedFiles="fglprofile,*.xcf" label="Resources" sourceDirectory="$(ProjectDir)/restServer2/resources"/>
+    </Package>
+  </Group>
   <Group excludeFromBuild="true" id="452019188" label="PPT-Code" language="Genero">
     <Library binaryName="presentation" id="155759245" label="presentation">
       <File filePath="presentation/00-PBR-Sample.4gl"/>
@@ -121,12 +135,14 @@
     </Library>
   </Group>
   <Group environment="filelist:FGLPROFILE=$(ProjectDir)/restServer2/resources/fglprofile;$(FGLPROFILE)" id="88077168" label="restServer2" language="Genero">
-    <Library binaryName="resources" id="80943291" label="resources">
+    <Library binaryName="config" id="482635652" label="config">
       <File filePath="restServer2/resources/fglprofile"/>
+    </Library>
+    <Library binaryName="resources" id="80943291" label="resources">
       <File filePath="restServer2/resources/MANIFEST"/>
       <File filePath="restServer2/resources/restServer2.xcf"/>
     </Library>
-    <Application binaryName="restServer2" dependencies="14000,30777294,434103810,85067868,320085717" environment="value:GWS_AUTHENTICATE=0,value:FGLDBNAME=officestore,value:GWS_MODULE=officestore,value:GWS_BASEPATH=http://localhost:8090/ws/r/rest,value:GWS_MAXLENGTH=-1,value:GWS_RWTIMEOUT=60,value:GWS_CONNECTTIMEOUT=25" id="457744524" label="restServer2">
+    <Application binaryName="restServer2" dependencies="14000,30777294,434103810,85067868,320085717" environment="value:FGLAPPSERVER=8090,value:GWS_AUTHENTICATE=0,value:FGLDBNAME=officestore,value:GWS_MODULE=officestore,value:GWS_BASEPATH=http://localhost:8090/ws/r/rest,value:GWS_MAXLENGTH=-1,value:GWS_RWTIMEOUT=60,value:GWS_CONNECTTIMEOUT=25" id="457744524" label="restServer2">
       <File filePath="restServer2/restServer2.4gl"/>
     </Application>
   </Group>
