@@ -35,4 +35,4 @@ C.R.U.D. Testing sequence
 
 Example curl with GAS Deployment
     
-    curl -X GET -i http://<myserver>/<gas>/ws/r/restServer2/countries/
+    curl -X GET -i http://<myserver>/<gas>/ws/r/restServer2/countries
