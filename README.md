@@ -32,3 +32,7 @@ C.R.U.D. Testing sequence
   Delete:
     
     curl -X DELETE -i 'http://localhost:8090/ws/r/rest/countries?id=FJS'
+
+Example curl with GAS Deployment
+    
+    curl -X GET -i http://<myserver>/<gas>/ws/r/restServer2/countries/
